@@ -10,7 +10,11 @@ base {
 	archivesName = project.archives_base_name
 }
 
-// Minecraft 26.x не обфусцирован -> блок mappings не нужен.
+repositories {
+	maven { url = 'https://maven.fabricmc.net/' }
+	mavenCentral()
+}
+
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
